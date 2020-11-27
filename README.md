@@ -2,19 +2,10 @@
 
 Endpoints
 
-POST: http://localhost:8080/users/authenticate
-  request:
-      body: {
-              "username":"admin",
-              "password":"admin"
-            }
-   response:
-      result: {
-                "jwt": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYwNjUxMTI2NCwiaWF0IjoxNjA2NDc1MjY0fQ.wF1EFEKbEa008GfQaY5GvfTvfGSj7E1lc8h6Ae_GhqM"
-              }
-
 
 GET: http://localhost:8080/users/list
+
+```
      request: 
           header: {
                     Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYwNjUxMTI2NCwiaWF0IjoxNjA2NDc1MjY0fQ.wF1EFEKbEa008GfQaY5GvfTvfGSj7E1lc8h6Ae_GhqM
@@ -56,7 +47,7 @@ GET: http://localhost:8080/users/list
                       }
                   ]
                   
-                  
+  ```                
                   
  POST : http://localhost:8080/users/register
  
@@ -86,8 +77,27 @@ GET: http://localhost:8080/users/list
                   SUCCESS STATUS:200
                    
                    
- #To update/insert data from external api - http://api.ipstack.com/134.201.250.155?access_key=626053333c5203dcd83c391d63485afb               
+ #To update/insert data from external api - http://api.ipstack.com/134.201.250.155?access_key=626053333c5203dcd83c391d63485afb              
  PUT: http://localhost:8080/users/update?param1=10&param2=134.201.250.155
+ ```
     response :
         SUCCESS STATUS:200
+ ```
  
+ 
+ POST: http://localhost:8080/users/authenticate
+
+```
+      request:
+             body: {
+                "username":"admin",
+                "password":"admin"
+                }
+ ```               
+  ```              
+      response:
+              result: {
+                    "jwt": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYwNjUxMTI2NCwiaWF0IjoxNjA2NDc1MjY0fQ.wF1EFEKbEa008GfQaY5GvfTvfGSj7E1lc8h6Ae_GhqM"
+               }
+```
+
